@@ -6,9 +6,10 @@
 [ext_resource type="Script" uid="uid://bmk7icsvecnvl" path="res://scenes/leaf.gd" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://duvfmjadqsnnq" path="res://assests/Art/LEAF.png" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://bir1waxhslabh" path="res://scenes/house.tscn" id="7_u5sy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
-size = Vector2(58, 95)
+size = Vector2(58, 17)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
 atlas = ExtResource("2_lbhrr")
@@ -222,11 +223,14 @@ cache/0/30/0/scale = 1.0
 [node name="Node2D" type="Node2D" unique_id=2082649133]
 script = ExtResource("1_p57ef")
 
+[node name="House" parent="." unique_id=1177030810 instance=ExtResource("7_u5sy4")]
+position = Vector2(-474, -164)
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2034718763]
 script = ExtResource("1_lnu2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2052521661]
-position = Vector2(5, -12.5)
+position = Vector2(5, 26.5)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=983257984]
