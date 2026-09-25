@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="A little leafy"
+run/main_scene="uid://l8d630or02tt"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
