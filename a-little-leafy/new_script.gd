@@ -10,4 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-	JACKS A WANKER
+	JACKS A WANKER!!! lol
