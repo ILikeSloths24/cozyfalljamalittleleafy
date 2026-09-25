@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://l8d630or02tt"]
 
 [ext_resource type="Script" uid="uid://dx6laraswu5mu" path="res://character_body_2d.gd" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://c6pf6bn5a4i3i" path="res://scenes/game.gd" id="1_p57ef"]
 [ext_resource type="Texture2D" uid="uid://b2x0v1uridqbp" path="res://assests/Art/CHARACTER FINAL.png" id="2_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://celfv6fem2swy" path="res://leaf.tscn" id="3_iywne"]
+[ext_resource type="Script" uid="uid://bmk7icsvecnvl" path="res://scenes/leaf.gd" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://duvfmjadqsnnq" path="res://assests/Art/LEAF.png" id="4_iywne"]
+[ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="5_iywne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
+size = Vector2(58, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
 atlas = ExtResource("2_lbhrr")
@@ -187,12 +193,41 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_p57ef"]
+radius = 13.152946
+
+[sub_resource type="FontFile" id="FontFile_lbhrr"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+
 [node name="Node2D" type="Node2D" unique_id=2082649133]
+script = ExtResource("1_p57ef")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2034718763]
 script = ExtResource("1_lnu2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2052521661]
+position = Vector2(5, -12.5)
+shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=983257984]
 position = Vector2(7, -14)
@@ -204,5 +239,49 @@ frame_progress = 0.27283302
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=557220815]
 
-[node name="Node2D" parent="." unique_id=2095554818 instance=ExtResource("3_iywne")]
-position = Vector2(-145, -17)
+[node name="Leaf" type="Area2D" parent="." unique_id=1136360925 groups=["leaves"]]
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf" unique_id=1158069216]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf" unique_id=822553520]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1868535772]
+
+[node name="CounterBox" type="TextureRect" parent="CanvasLayer" unique_id=1874377406]
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 233.0
+offset_bottom = 84.25
+texture = ExtResource("5_iywne")
+
+[node name="LeafCounter" type="Label" parent="CanvasLayer/CounterBox" unique_id=1572110916]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 12.0
+offset_right = 223.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 0.50980395, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_lbhrr")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_p57ef")
+text = "  Leaves: 0 / 0"
+
+[node name="Leaf2" type="Area2D" parent="." unique_id=1771810562 groups=["leaves"]]
+position = Vector2(-43, 0)
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf2" unique_id=282093111]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=1936887670]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
+[connection signal="body_entered" from="Leaf" to="Leaf" method="_on_body_entered"]
+[connection signal="body_entered" from="Leaf2" to="Leaf2" method="_on_body_entered"]
