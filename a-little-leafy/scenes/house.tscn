@@ -4,10 +4,12 @@
 [ext_resource type="Script" uid="uid://ba5jn6a3d6jaa" path="res://entrance.gd" id="2_rk7hg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se78b"]
-size = Vector2(531, 461)
+size = Vector2(529, 278)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtlar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bgk5"]
-size = Vector2(122, 141)
+size = Vector2(488, 127)
 
 [node name="House" type="Node2D" unique_id=1177030810]
 
@@ -18,14 +20,19 @@ texture = ExtResource("1_qtlar")
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1014203309]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1746755869]
-position = Vector2(26, 93.5)
+position = Vector2(18.5, 62)
 shape = SubResource("RectangleShape2D_se78b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=802691634]
+shape = SubResource("RectangleShape2D_qtlar")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=991027954]
 
 [node name="Entrance" type="Area2D" parent="." unique_id=940489580]
 script = ExtResource("2_rk7hg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance" unique_id=1651182810]
-position = Vector2(22, 277.5)
+position = Vector2(25, 263.5)
 shape = SubResource("RectangleShape2D_3bgk5")
 
 [node name="EnterPrompt" type="Label" parent="." unique_id=476500907]
