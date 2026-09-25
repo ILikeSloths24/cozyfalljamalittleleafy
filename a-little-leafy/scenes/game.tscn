@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://duvfmjadqsnnq" path="res://assests/Art/LEAF.png" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bir1waxhslabh" path="res://scenes/house.tscn" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://b3ksd0alxc3nl" path="res://assests/Art/Path Cleaner Connections.png" id="8_gee14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
 size = Vector2(58, 17)
@@ -220,6 +221,17 @@ cache/0/30/0/scale = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
+texture = ExtResource("8_gee14")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vtaks"]
+sources/0 = SubResource("TileSetAtlasSource_0tnpc")
+
 [node name="Node2D" type="Node2D" unique_id=2082649133]
 script = ExtResource("1_p57ef")
 
@@ -265,11 +277,12 @@ texture = ExtResource("5_iywne")
 
 [node name="LeafCounter" type="Label" parent="CanvasLayer/CounterBox" unique_id=1572110916]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 12.0
-offset_right = 223.0
-offset_bottom = 62.0
-theme_override_colors/font_color = Color(1, 0.50980395, 0, 1)
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 215.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.8057534, 0.6938471, 0.5707684, 0)
 theme_override_fonts/font = SubResource("FontFile_lbhrr")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_p57ef")
@@ -286,6 +299,13 @@ texture = ExtResource("4_iywne")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=1936887670]
 position = Vector2(-81, 10)
 shape = SubResource("CircleShape2D_p57ef")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=820188089]
+format = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMap" unique_id=1692425569]
+tile_map_data = PackedByteArray(0, 0, 227, 255, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 225, 255, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 229, 255, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_vtaks")
 
 [connection signal="body_entered" from="Leaf" to="Leaf" method="_on_body_entered"]
 [connection signal="body_entered" from="Leaf2" to="Leaf2" method="_on_body_entered"]
