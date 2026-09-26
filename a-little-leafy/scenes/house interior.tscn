@@ -357,11 +357,10 @@ position = Vector2(37.53752, -26.106909)
 shape = SubResource("RectangleShape2D_tm25k")
 
 [node name="ExitPrompt" type="Label" parent="." unique_id=33846365]
-visible = false
-offset_left = -850.0
-offset_top = 1546.0
-offset_right = -742.0
-offset_bottom = 1569.0
+offset_left = -852.0
+offset_top = 1532.0
+offset_right = -744.0
+offset_bottom = 1555.0
 text = "Press E to Exit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1090069747]
