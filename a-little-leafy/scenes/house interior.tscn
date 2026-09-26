@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://xeq8llr8v2t" path="res://assests/Art/ChatGPT_Image_Sep_26__2026__02_45_58_PM-removebg-preview.png" id="3_b7man"]
 [ext_resource type="Script" uid="uid://d1pegx2wd4fvf" path="res://scenes/exit.gd" id="4_f8r2r"]
 [ext_resource type="Texture2D" uid="uid://bqobvl4fidc6o" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
+[ext_resource type="Texture2D" uid="uid://byg43f2f3w7d8" path="res://assests/Art/Fire.png" id="7_ienn0"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ienn0"]
 diffuse_texture = ExtResource("1_edutt")
@@ -275,6 +276,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm25k"]
+atlas = ExtResource("7_ienn0")
+region = Rect2(0, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70dkw"]
+atlas = ExtResource("7_ienn0")
+region = Rect2(0, 33, 32, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qabks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm25k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70dkw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=936323373]
@@ -386,6 +409,13 @@ animation = &"idle_up"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
 position = Vector2(-178, 205)
+
+[node name="Fire" type="AnimatedSprite2D" parent="." unique_id=62521213]
+position = Vector2(-808.00006, 1075)
+scale = Vector2(2.4375, 2.4375)
+sprite_frames = SubResource("SpriteFrames_qabks")
+autoplay = "default"
+frame_progress = 0.5502807
 
 [connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
 [connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]
