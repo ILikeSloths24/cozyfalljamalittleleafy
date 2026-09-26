@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dx6laraswu5mu" path="res://character_body_2d.gd" id="2_f8r2r"]
 [ext_resource type="Texture2D" uid="uid://xeq8llr8v2t" path="res://assests/Art/ChatGPT_Image_Sep_26__2026__02_45_58_PM-removebg-preview.png" id="3_b7man"]
 [ext_resource type="Script" uid="uid://d1pegx2wd4fvf" path="res://scenes/exit.gd" id="4_f8r2r"]
+[ext_resource type="Texture2D" uid="uid://bqobvl4fidc6o" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv33g"]
 size = Vector2(124.87044, 39.776)
@@ -221,6 +222,42 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37xdy"]
 size = Vector2(191, 33)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_edutt"]
+atlas = ExtResource("5_b7man")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ienn0"]
+atlas = ExtResource("5_b7man")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arbq3"]
+atlas = ExtResource("5_b7man")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ussa"]
+atlas = ExtResource("5_b7man")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tm25k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edutt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ienn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arbq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ussa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=358755191]
@@ -300,6 +337,12 @@ script = ExtResource("4_f8r2r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Exit" unique_id=1645528374]
 position = Vector2(-803, 1504.5)
 shape = SubResource("RectangleShape2D_37xdy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=648641037]
+position = Vector2(-593.5, 1309.5)
+scale = Vector2(1.6562508, 1.6562508)
+sprite_frames = SubResource("SpriteFrames_tm25k")
+frame_progress = 0.04541752
 
 [connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
 [connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]
