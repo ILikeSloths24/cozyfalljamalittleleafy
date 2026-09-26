@@ -248,7 +248,7 @@ cache/0/30/0/scale = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_p57ef"]
 radius = 13.152946
 
-[node name="Node2D" type="Node2D" unique_id=2082649133]
+[node name="Node2D" type="Node2D" unique_id=2082649133 groups=["leaves"]]
 script = ExtResource("1_p57ef")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=225998576]
@@ -303,96 +303,81 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_p57ef")
 text = "  Leaves: 0 / 0"
 
-[node name="the l word" type="Node2D" parent="." unique_id=930252886]
-position = Vector2(-5, 140)
-
-[node name="Leaf" type="Area2D" parent="the l word" unique_id=1136360925 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf" unique_id=1158069216]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf" unique_id=822553520]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
-[node name="Leaf2" type="Area2D" parent="the l word" unique_id=2089164369 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf2" unique_id=1126120925]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf2" unique_id=186215682]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
-[node name="Leaf3" type="Area2D" parent="the l word" unique_id=742185863 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf3" unique_id=138807913]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf3" unique_id=1925677608]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
-[node name="Leaf4" type="Area2D" parent="the l word" unique_id=659988044 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf4" unique_id=873006993]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf4" unique_id=1573201456]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
-[node name="Leaf5" type="Area2D" parent="the l word" unique_id=1095299307 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf5" unique_id=427564864]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf5" unique_id=1996989553]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
-[node name="Leaf6" type="Area2D" parent="the l word" unique_id=2102410648 groups=["leaves"]]
-position = Vector2(89, 198)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("3_lbhrr")
-
-[node name="Sprite2D" type="Sprite2D" parent="the l word/Leaf6" unique_id=1830909373]
-position = Vector2(-79, 8)
-texture = ExtResource("4_iywne")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="the l word/Leaf6" unique_id=1952565497]
-position = Vector2(-81, 10)
-shape = SubResource("CircleShape2D_p57ef")
-
 [node name="tree2" parent="." unique_id=214579127 instance=ExtResource("10_vtaks")]
 position = Vector2(-1824, -371)
 
 [node name="tree" parent="." unique_id=1197576672 instance=ExtResource("10_vtaks")]
 position = Vector2(200, -245)
 
-[connection signal="body_entered" from="the l word/Leaf" to="the l word/Leaf" method="_on_body_entered"]
-[connection signal="body_entered" from="the l word/Leaf2" to="the l word/Leaf2" method="_on_body_entered"]
-[connection signal="body_entered" from="the l word/Leaf3" to="the l word/Leaf3" method="_on_body_entered"]
-[connection signal="body_entered" from="the l word/Leaf4" to="the l word/Leaf4" method="_on_body_entered"]
-[connection signal="body_entered" from="the l word/Leaf5" to="the l word/Leaf5" method="_on_body_entered"]
-[connection signal="body_entered" from="the l word/Leaf6" to="the l word/Leaf6" method="_on_body_entered"]
+[node name="Leaf" type="Area2D" parent="." unique_id=1136360925 groups=["leaves"]]
+position = Vector2(84, 338)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf" unique_id=1158069216]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf" unique_id=822553520]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
+[node name="Leaf2" type="Area2D" parent="." unique_id=2089164369 groups=["leaves"]]
+position = Vector2(84, 338)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf2" unique_id=1126120925]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf2" unique_id=186215682]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
+[node name="Leaf3" type="Area2D" parent="." unique_id=742185863 groups=["leaves"]]
+position = Vector2(84, 338)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf3" unique_id=138807913]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf3" unique_id=1925677608]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
+[node name="Node2D" parent="." unique_id=152766850 instance=ExtResource("10_vtaks")]
+position = Vector2(-2503, 326)
+
+[node name="Node2D2" parent="." unique_id=718327323 instance=ExtResource("10_vtaks")]
+position = Vector2(-2143, 76)
+
+[node name="Node2D3" parent="." unique_id=1105156417 instance=ExtResource("10_vtaks")]
+position = Vector2(-2231, 524)
+
+[node name="Node2D4" parent="." unique_id=982202131 instance=ExtResource("10_vtaks")]
+position = Vector2(-1934, 370)
+
+[node name="Node2D5" parent="." unique_id=1160604452 instance=ExtResource("10_vtaks")]
+position = Vector2(-1809, 6)
+
+[node name="Node2D6" parent="." unique_id=1861600320 instance=ExtResource("10_vtaks")]
+position = Vector2(-1673, 568)
+
+[node name="Node2D7" parent="." unique_id=1428301179 instance=ExtResource("10_vtaks")]
+position = Vector2(-1481, 215)
+
+[node name="Node2D8" parent="." unique_id=1975515774 instance=ExtResource("10_vtaks")]
+position = Vector2(-1742, 208)
+
+[node name="Node2D9" parent="." unique_id=2086001307 instance=ExtResource("10_vtaks")]
+position = Vector2(-2001, 597)
+
+[node name="Node2D10" parent="." unique_id=571656036 instance=ExtResource("10_vtaks")]
+position = Vector2(-1458, 346)
+
+[connection signal="body_entered" from="Leaf" to="Leaf" method="_on_body_entered"]
+[connection signal="body_entered" from="Leaf2" to="Leaf2" method="_on_body_entered"]
+[connection signal="body_entered" from="Leaf3" to="Leaf3" method="_on_body_entered"]
