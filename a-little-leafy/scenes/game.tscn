@@ -375,6 +375,7 @@ position = Vector2(-1458, 346)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=535366663]
 stream = SubResource("AudioStreamMP3_vtaks")
+volume_db = -22.12
 autoplay = true
 playback_type = 1
 script = ExtResource("11_kvpfn")
