@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cnqomquv0ign" path="res://assests/Art/Stones.png" id="9_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
-size = Vector2(58, 17)
+size = Vector2(68, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
 atlas = ExtResource("2_lbhrr")
@@ -253,12 +253,12 @@ position = Vector2(-474, -164)
 script = ExtResource("1_lnu2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2052521661]
-position = Vector2(5, 26.5)
+position = Vector2(20, 26.5)
 shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=983257984]
-position = Vector2(7, -14)
-scale = Vector2(3.3125, 3.375)
+position = Vector2(24.000002, -31.320757)
+scale = Vector2(4.375, 4.457547)
 sprite_frames = SubResource("SpriteFrames_f1jbl")
 animation = &"move_down"
 frame = 3

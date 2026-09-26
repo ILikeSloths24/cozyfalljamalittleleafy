@@ -1,46 +1,62 @@
 [gd_scene format=3 uid="uid://bir1waxhslabh"]
 
-[ext_resource type="Texture2D" uid="uid://mb267me3fygg" path="res://assests/Art/Cozy cottage.png" id="1_qtlar"]
 [ext_resource type="Script" uid="uid://ba5jn6a3d6jaa" path="res://entrance.gd" id="2_rk7hg"]
 [ext_resource type="Texture2D" uid="uid://cwef8u7tt4aqn" path="res://assests/Art/House_Inspo.png" id="3_rk7hg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_se78b"]
-size = Vector2(531, 461)
+size = Vector2(772, 380.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtlar"]
+size = Vector2(355.40625, 160)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rk7hg"]
+radius = 161.11176
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f74lx"]
+size = Vector2(267, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bgk5"]
-size = Vector2(122, 141)
+size = Vector2(122, 216.5)
 
 [node name="House" type="Node2D" unique_id=1177030810]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1439747472]
-scale = Vector2(10, 10)
-texture = ExtResource("1_qtlar")
+position = Vector2(8.999999, 2.9999998)
+scale = Vector2(7, 7)
+texture = ExtResource("3_rk7hg")
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1014203309]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1746755869]
-position = Vector2(26, 93.5)
+position = Vector2(21, -26.875)
 shape = SubResource("RectangleShape2D_se78b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=2064913609]
+position = Vector2(231.29688, 229)
+shape = SubResource("RectangleShape2D_qtlar")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=716689762]
+position = Vector2(12, -159)
+shape = SubResource("CircleShape2D_rk7hg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1180136422]
+position = Vector2(-233.5, 226)
+shape = SubResource("RectangleShape2D_f74lx")
 
 [node name="Entrance" type="Area2D" parent="." unique_id=940489580]
 script = ExtResource("2_rk7hg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance" unique_id=1651182810]
-position = Vector2(22, 277.5)
+position = Vector2(-21, 121)
 shape = SubResource("RectangleShape2D_3bgk5")
 
 [node name="EnterPrompt" type="Label" parent="." unique_id=476500907]
 visible = false
-offset_left = -48.0
-offset_top = 180.0
-offset_right = 92.0
-offset_bottom = 203.0
+offset_left = -88.0
+offset_top = -17.0
+offset_right = 52.0
+offset_bottom = 6.0
 text = "PRESS E TO ENTER"
-
-[node name="HouseInspo" type="Sprite2D" parent="." unique_id=5144112]
-position = Vector2(738.24994, 27.499985)
-scale = Vector2(6.0585938, 6.5234375)
-texture = ExtResource("3_rk7hg")
 
 [connection signal="body_entered" from="Entrance" to="Entrance" method="_on_body_entered"]
 [connection signal="body_exited" from="Entrance" to="Entrance" method="_on_body_exited"]
