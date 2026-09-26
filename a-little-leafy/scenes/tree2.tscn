@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://da56cptbdmwi7"]
+
+[ext_resource type="Texture2D" uid="uid://hde5pyyn21yi" path="res://assests/Art/Tree 2.png" id="1_hyyiy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_62k3r"]
+radius = 2.4406786
+height = 18.983053
+
+[node name="Node2D" type="Node2D" unique_id=1242251810]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=107260728]
+position = Vector2(179.5, 179.5)
+scale = Vector2(12.21875, 12.21875)
+texture = ExtResource("1_hyyiy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=378600894]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=2035016337]
+position = Vector2(-1.6271188, 6.644068)
+rotation = 0.4607532
+shape = SubResource("CapsuleShape2D_62k3r")
