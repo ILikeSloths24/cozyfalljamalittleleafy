@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://sqitpmkciaom"]
+
+[ext_resource type="Texture2D" uid="uid://dgygw1l5fql5k" path="res://assests/Art/Tree 1.png" id="1_xuq4r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vvkj6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsdlh"]
+size = Vector2(4.2037525, 9.399464)
+
+[node name="Node2D" type="Node2D" unique_id=214579127]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1575264971]
+position = Vector2(170.5, 191.8125)
+scale = Vector2(11.65625, 11.65625)
+texture = ExtResource("1_xuq4r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D" unique_id=164341133]
+sprite_frames = SubResource("SpriteFrames_vvkj6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1132960889]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=581522790]
+position = Vector2(0.9008045, 11.235926)
+shape = SubResource("RectangleShape2D_fsdlh")

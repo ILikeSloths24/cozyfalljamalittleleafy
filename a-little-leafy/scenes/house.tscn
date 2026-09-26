@@ -7,13 +7,13 @@
 size = Vector2(772, 380.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtlar"]
-size = Vector2(355.40625, 160)
+size = Vector2(342, 163)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rk7hg"]
 radius = 161.11176
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f74lx"]
-size = Vector2(267, 128)
+size = Vector2(258, 113)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bgk5"]
 size = Vector2(122, 216.5)
@@ -32,7 +32,7 @@ position = Vector2(21, -26.875)
 shape = SubResource("RectangleShape2D_se78b")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=2064913609]
-position = Vector2(231.29688, 229)
+position = Vector2(238, 230.5)
 shape = SubResource("RectangleShape2D_qtlar")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=716689762]
@@ -40,7 +40,7 @@ position = Vector2(12, -159)
 shape = SubResource("CircleShape2D_rk7hg")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1180136422]
-position = Vector2(-233.5, 226)
+position = Vector2(-238, 218.5)
 shape = SubResource("RectangleShape2D_f74lx")
 
 [node name="Entrance" type="Area2D" parent="." unique_id=940489580]
