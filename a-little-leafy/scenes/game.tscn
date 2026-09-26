@@ -270,6 +270,7 @@ layer_0/tile_data = PackedInt32Array(1114135, 131075, 0, 1179671, 131075, 0, 124
 position = Vector2(-504, -139)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2034718763]
+position = Vector2(-347, -112)
 script = ExtResource("1_lnu2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2052521661]

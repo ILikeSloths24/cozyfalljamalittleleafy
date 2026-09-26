@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d4drlwe4arnoq" path="res://assests/Art/Inside Of Room.png" id="1_37xdy"]
 [ext_resource type="Script" uid="uid://dx6laraswu5mu" path="res://character_body_2d.gd" id="2_f8r2r"]
 [ext_resource type="Texture2D" uid="uid://xeq8llr8v2t" path="res://assests/Art/ChatGPT_Image_Sep_26__2026__02_45_58_PM-removebg-preview.png" id="3_b7man"]
+[ext_resource type="Script" uid="uid://d1pegx2wd4fvf" path="res://scenes/exit.gd" id="4_f8r2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv33g"]
 size = Vector2(124.87044, 39.776)
@@ -218,7 +219,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37xdy"]
-size = Vector2(191, 20)
+size = Vector2(191, 33)
 
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 
@@ -266,7 +267,7 @@ position = Vector2(-39.230934, 18.40625)
 shape = SubResource("RectangleShape2D_m2jl7")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=616034328]
-position = Vector2(111, 397)
+position = Vector2(115, 186.00003)
 scale = Vector2(5.1568627, 5.1568627)
 script = ExtResource("2_f8r2r")
 
@@ -283,8 +284,22 @@ animation = &"idle_up"
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
 position = Vector2(-178, 205)
 
-[node name="Exit" type="Area2D" parent="." unique_id=544678480]
+[node name="ExitPrompt" type="Label" parent="." unique_id=33846365]
+visible = false
+offset_left = -861.0
+offset_top = 1368.0
+offset_right = -753.0
+offset_bottom = 1391.0
+text = "Press E to Exit"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=1645528374]
-position = Vector2(-803, 1511)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1090069747]
+
+[node name="Exit" type="Area2D" parent="CanvasLayer" unique_id=544678480]
+script = ExtResource("4_f8r2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Exit" unique_id=1645528374]
+position = Vector2(-803, 1504.5)
 shape = SubResource("RectangleShape2D_37xdy")
+
+[connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
+[connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]
