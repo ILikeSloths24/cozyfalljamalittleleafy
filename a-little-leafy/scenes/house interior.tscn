@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://qkb1s4jw7os0"]
 
 [ext_resource type="Texture2D" uid="uid://d4drlwe4arnoq" path="res://assests/Art/Inside Of Room.png" id="1_37xdy"]
+[ext_resource type="Texture2D" uid="uid://cydnlv0401skk" path="res://assests/Art/Screenshot 2026-09-26 161706.png" id="1_edutt"]
 [ext_resource type="Script" uid="uid://dx6laraswu5mu" path="res://character_body_2d.gd" id="2_f8r2r"]
 [ext_resource type="Texture2D" uid="uid://xeq8llr8v2t" path="res://assests/Art/ChatGPT_Image_Sep_26__2026__02_45_58_PM-removebg-preview.png" id="3_b7man"]
 [ext_resource type="Script" uid="uid://d1pegx2wd4fvf" path="res://scenes/exit.gd" id="4_f8r2r"]
 [ext_resource type="Texture2D" uid="uid://bqobvl4fidc6o" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv33g"]
-size = Vector2(124.87044, 39.776)
+[sub_resource type="CanvasTexture" id="CanvasTexture_ienn0"]
+diffuse_texture = ExtResource("1_edutt")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrumd"]
 size = Vector2(47.53752, 20)
@@ -22,7 +23,7 @@ size = Vector2(8.024338, 40.763824)
 size = Vector2(12.963486, 37.527794)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wsy1"]
-size = Vector2(46.26745, 20)
+size = Vector2(46.26745, 29.756577)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0new"]
 size = Vector2(15.377062, 13.8199005)
@@ -32,6 +33,15 @@ size = Vector2(11.975662, 14.807724)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2jl7"]
 size = Vector2(20, 12.822372)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arbq3"]
+size = Vector2(44.150665, 32.578964)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ussa"]
+size = Vector2(28.909874, 36.953667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm25k"]
+size = Vector2(44.009556, 39.352646)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37xdy"]
 size = Vector2(191, 33)
@@ -267,16 +277,17 @@ animations = [{
 
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=936323373]
+position = Vector2(-1289, 985)
+scale = Vector2(-92.244446, 24.379211)
+texture = SubResource("CanvasTexture_ienn0")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=358755191]
 position = Vector2(-811, 1222)
 scale = Vector2(7.086244, 7.086244)
 texture = ExtResource("1_37xdy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=2081926458]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=567670766]
-position = Vector2(-0.6253357, -28.355072)
-shape = SubResource("RectangleShape2D_gv33g")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1055405200]
 position = Vector2(-34.85627, 38.52535)
@@ -295,7 +306,7 @@ position = Vector2(57.57634, 10.019413)
 shape = SubResource("RectangleShape2D_o76d4")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1757651419]
-position = Vector2(0.1411205, 52.919437)
+position = Vector2(0.14112091, 48.04117)
 shape = SubResource("RectangleShape2D_2wsy1")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=742569168]
@@ -310,12 +321,24 @@ shape = SubResource("RectangleShape2D_705bg")
 position = Vector2(-39.230934, 18.40625)
 shape = SubResource("RectangleShape2D_m2jl7")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1934891448]
+position = Vector2(-36.408573, -24.977964)
+shape = SubResource("RectangleShape2D_arbq3")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1986680999]
+position = Vector2(0.56447756, -32.88061)
+shape = SubResource("RectangleShape2D_3ussa")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1656209485]
+position = Vector2(37.53752, -26.106909)
+shape = SubResource("RectangleShape2D_tm25k")
+
 [node name="ExitPrompt" type="Label" parent="." unique_id=33846365]
 visible = false
-offset_left = -861.0
-offset_top = 1368.0
-offset_right = -753.0
-offset_bottom = 1391.0
+offset_left = -850.0
+offset_top = 1546.0
+offset_right = -742.0
+offset_bottom = 1569.0
 text = "Press E to Exit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1090069747]
@@ -324,7 +347,7 @@ text = "Press E to Exit"
 script = ExtResource("4_f8r2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Exit" unique_id=1645528374]
-position = Vector2(-803, 1504.5)
+position = Vector2(-800, 1443)
 shape = SubResource("RectangleShape2D_37xdy")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=584599826]
@@ -347,7 +370,7 @@ scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_b7man")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=616034328]
-position = Vector2(115, 186.00003)
+position = Vector2(115, 187)
 scale = Vector2(5.1568627, 5.1568627)
 script = ExtResource("2_f8r2r")
 

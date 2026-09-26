@@ -15,6 +15,10 @@ run/main_scene="uid://qkb1s4jw7os0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameData="*uid://cdkl6eorx12bc"
+
 [input]
 
 move_down={
