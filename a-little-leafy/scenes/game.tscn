@@ -297,7 +297,7 @@ position = Vector2(-179, 173)
 scale = Vector2(1.1715, 1.1936038)
 sprite_frames = SubResource("SpriteFrames_f1jbl")
 animation = &"idle_down"
-frame_progress = 0.5648309
+frame_progress = 0.37418747
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=557220815]
 position = Vector2(-178, 205)
