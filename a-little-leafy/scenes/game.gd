@@ -1,6 +1,6 @@
 extends Node2D
 
-var total_leaves: int = 6
+var total_leaves: int = 512
 
 @onready var leaf_counter = $CanvasLayer/CounterBox/LeafCounter
 @onready var timer_label = $CanvasLayer/TextureRect/TimerLabel

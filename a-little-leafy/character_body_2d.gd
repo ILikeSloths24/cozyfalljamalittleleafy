@@ -9,10 +9,10 @@ var last_direction := "down"
 
 func update_upgrades():
 	# SPEED UPGRADES
-	if GameData.leaves_collected >= 3:
-		speed = 180.0
-	elif GameData.leaves_collected >= 1:
-		speed = 165.0
+	if GameData.leaves_collected >= 300:
+		speed = 250
+	elif GameData.leaves_collected >= 50:
+		speed = 200
 	else:
 		speed = 150.0
 
@@ -20,13 +20,13 @@ func update_upgrades():
 	if has_node("LeafPickupRadius/CollisionShape2D"):
 		var pickup_shape = $LeafPickupRadius/CollisionShape2D.shape
 
-		if GameData.leaves_collected >= 6:
-			pickup_shape.radius = 85.0
-		elif GameData.leaves_collected >= 2:
-			pickup_shape.radius = 60.0
+		if GameData.leaves_collected >= 500:
+			pickup_shape.radius = 150
+		elif GameData.leaves_collected >= 150:
+			pickup_shape.radius = 90
 		else:
 			pickup_shape.radius = 30.0
-		if GameData.leaves_collected >= 2:
+		if GameData.leaves_collected >= 100:
 			pickup_shape.radius = 60.0
 		else:
 			pickup_shape.radius = 30.0
