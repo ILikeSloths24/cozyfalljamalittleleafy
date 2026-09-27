@@ -257,7 +257,7 @@ horizontal_alignment = 1
 
 [node name="LobbyMusic" type="AudioStreamPlayer" parent="." unique_id=113270808]
 stream = SubResource("AudioStreamMP3_rtw2f")
-volume_db = 10.866
+volume_db = -4.269
 autoplay = true
 
 [node name="MusicButton" type="Button" parent="." unique_id=649312058]
