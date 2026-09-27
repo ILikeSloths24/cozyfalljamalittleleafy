@@ -6,3 +6,10 @@ func _on_play_button_pressed() -> void:
 
 func _on_quit_button_pressed():
 	get_tree().quit()
+
+func _on_help_button_pressed():
+	$HelpScreen.visible = true
+
+
+func _on_back_button_pressed():
+	$HelpScreen.visible = false

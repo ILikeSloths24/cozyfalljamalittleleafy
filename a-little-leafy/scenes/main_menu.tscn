@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ijue3xhr6j0a" path="res://scenes/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://dhurc0hwodkee" path="res://assests/Art/Loading Screen.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cjvv03vmee53p" path="res://assests/Art/help button.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://dvtx27uuoocml" path="res://assests/Art/help screen.png" id="4_oa1go"]
+[ext_resource type="Texture2D" uid="uid://blu7fobrh1n64" path="res://assests/Art/go back button.png" id="5_tbmy8"]
+[ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="6_jk1qb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6cm7"]
 
@@ -46,6 +50,50 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gw5y6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svtp6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dfpl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qywvv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wgol"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1acrt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr8o3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1a85y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl5e0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_engjn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6h3lr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj67d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6vcge"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ip0br"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xyero"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tcusk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4puye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q13xq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u43bj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvjdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxnar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eku7s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6nra"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qw82i"]
 
 [node name="MainMenu" type="Control" unique_id=902402231]
 layout_mode = 3
@@ -100,5 +148,88 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_8egab")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gw5y6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_svtp6")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=521697672]
+position = Vector2(576, 565)
+scale = Vector2(4.875, 4.875)
+texture = ExtResource("3_rtw2f")
+
+[node name="HelpButton" type="Button" parent="." unique_id=1672218108]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 522.0
+offset_right = 617.0
+offset_bottom = 606.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1dfpl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qywvv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3wgol")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1acrt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vr8o3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1a85y")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hl5e0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_engjn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6h3lr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dj67d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6vcge")
+
+[node name="HelpScreen" type="Control" parent="." unique_id=1500516031]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="HelpScreen" unique_id=1798900316]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 652.0
+texture = ExtResource("4_oa1go")
+
+[node name="Sprite2D" type="Sprite2D" parent="HelpScreen" unique_id=406608150]
+position = Vector2(87, 558)
+scale = Vector2(8.5625, 8.5625)
+texture = ExtResource("5_tbmy8")
+
+[node name="BackButton" type="Button" parent="HelpScreen" unique_id=1858844244]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 491.0
+offset_right = 156.0
+offset_bottom = 631.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ip0br")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xyero")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tcusk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4puye")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q13xq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_u43bj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jvjdd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yxnar")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eku7s")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c6nra")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qw82i")
+
+[node name="Label" type="Label" parent="HelpScreen" unique_id=308137794]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 3.0
+offset_right = 1141.0
+offset_bottom = 656.0
+theme_override_fonts/font = ExtResource("6_jk1qb")
+theme_override_font_sizes/font_size = 36
+text = "
+CONTROLS:
+
+WASD — Move
+E — Interact
+
+HOW TO PLAY:
+
+Collect leaves around the map.
+Reach leaf milestones to unlock upgrades for your character.
+Collect every leaf to win the game.
+
+          "
+horizontal_alignment = 1
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpScreen/BackButton" to="." method="_on_back_button_pressed"]

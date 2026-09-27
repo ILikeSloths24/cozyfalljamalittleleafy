@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crcg2c35vomew" path="res://victory_screen.gd" id="1_wdgif"]
 [ext_resource type="Texture2D" uid="uid://doa85tnbc8tca" path="res://assests/Art/win screen.png" id="2_pfcnd"]
 [ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="3_pfcnd"]
+[ext_resource type="Texture2D" uid="uid://wqwikwsmpmkx" path="res://assests/Art/Maple Leaf.png" id="4_ll51u"]
 [ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="4_rixwf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rixwf"]
@@ -69,6 +70,138 @@ position = Vector2(572.5, 281)
 scale = Vector2(6.234375, 4.8125)
 texture = ExtResource("3_pfcnd")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1319870683]
+position = Vector2(116, 557)
+rotation = 0.4573914
+scale = Vector2(3.0234375, 2.3338814)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=296773218]
+position = Vector2(150.09149, 413.0894)
+rotation = 0.4573914
+scale = Vector2(3.8839173, 2.9981112)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=471157678]
+position = Vector2(83.720215, 262.16504)
+rotation = 0.4573914
+scale = Vector2(2.0067632, 1.5490803)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=508482481]
+position = Vector2(120.00001, 120)
+rotation = -0.5550833
+scale = Vector2(3.0234375, 2.3338814)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1647407468]
+position = Vector2(252.54767, 220.55125)
+rotation = 0.4573914
+scale = Vector2(2.4567337, 1.8964258)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1815510181]
+position = Vector2(294.89185, 417.7095)
+rotation = 0.4573914
+scale = Vector2(1.6813592, 1.2978913)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1477727630]
+position = Vector2(287.30984, 527.95074)
+rotation = 0.4573914
+scale = Vector2(2.9050562, 2.2424994)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1965566054]
+position = Vector2(869, 527)
+rotation = 0.4573914
+scale = Vector2(3.0234375, 2.3338814)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1857949170]
+position = Vector2(867.57965, 324.678)
+rotation = -0.205879
+scale = Vector2(3.7211263, 2.872448)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=760587061]
+position = Vector2(893.47217, 190.38141)
+rotation = 0.4573914
+scale = Vector2(3.8395097, 2.9638317)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D23" type="Sprite2D" parent="." unique_id=1643053797]
+position = Vector2(1031, 122.00007)
+rotation = -2.2356625
+scale = Vector2(3.8395097, 2.9638317)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=1356823719]
+position = Vector2(421.00006, 59.999985)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D15" type="Sprite2D" parent="." unique_id=1205898360]
+position = Vector2(523, 52)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D16" type="Sprite2D" parent="." unique_id=1478506656]
+position = Vector2(644.00006, 42.999985)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D17" type="Sprite2D" parent="." unique_id=1390350401]
+position = Vector2(752, 54)
+rotation = -0.5944922
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D18" type="Sprite2D" parent="." unique_id=100053213]
+position = Vector2(439.00012, 584)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D19" type="Sprite2D" parent="." unique_id=1706324421]
+position = Vector2(439.00012, 584)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D20" type="Sprite2D" parent="." unique_id=1023495257]
+position = Vector2(558, 592)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D21" type="Sprite2D" parent="." unique_id=842012179]
+position = Vector2(692.0001, 601)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D22" type="Sprite2D" parent="." unique_id=521314548]
+position = Vector2(692.0001, 601)
+rotation = 0.4573914
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=531043471]
+position = Vector2(1053, 296)
+rotation = 0.4573914
+scale = Vector2(3.0234375, 2.3338814)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=1454653828]
+position = Vector2(1034, 462.00003)
+rotation = 0.4573914
+scale = Vector2(3.0234375, 2.3338814)
+texture = ExtResource("4_ll51u")
+
 [node name="TimeTitle" type="Label" parent="." unique_id=808753700]
 layout_mode = 0
 offset_right = 40.0
@@ -82,7 +215,6 @@ offset_right = 776.0
 offset_bottom = 371.0
 theme_override_fonts/font = ExtResource("4_rixwf")
 theme_override_font_sizes/font_size = 100
-text = "e"
 
 [node name="RestartButton" type="Button" parent="." unique_id=518010464]
 layout_mode = 0
