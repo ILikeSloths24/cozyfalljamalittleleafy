@@ -6,10 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://wqwikwsmpmkx" path="res://assests/Art/Maple Leaf.png" id="4_ll51u"]
 [ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="4_rixwf"]
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ll51u"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rixwf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ll51u"]
@@ -91,101 +87,6 @@ offset_right = 798.0
 offset_bottom = 359.0
 theme_override_fonts/font = ExtResource("4_rixwf")
 theme_override_font_sizes/font_size = 100
-
-[node name="FallingLeaves" type="GPUParticles2D" parent="." unique_id=311548696]
-position = Vector2(39, -50)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.56
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves2" type="GPUParticles2D" parent="." unique_id=1666969862]
-position = Vector2(129, -45)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.2
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves3" type="GPUParticles2D" parent="." unique_id=371922487]
-position = Vector2(225, -43)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.7
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves4" type="GPUParticles2D" parent="." unique_id=1816435766]
-position = Vector2(330, -51)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.48
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves5" type="GPUParticles2D" parent="." unique_id=1972861211]
-position = Vector2(425, -43)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.55
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves6" type="GPUParticles2D" parent="." unique_id=593044137]
-position = Vector2(488, -46)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 1.0
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves7" type="GPUParticles2D" parent="." unique_id=485500987]
-position = Vector2(576, -54)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.19
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves8" type="GPUParticles2D" parent="." unique_id=1294509772]
-position = Vector2(679, -57)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves9" type="GPUParticles2D" parent="." unique_id=1592255797]
-position = Vector2(1096, -52)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.44
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves10" type="GPUParticles2D" parent="." unique_id=1203126477]
-position = Vector2(1016, -39)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.79
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves11" type="GPUParticles2D" parent="." unique_id=2127649963]
-position = Vector2(883, -40)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 0.18
-process_material = SubResource("ParticleProcessMaterial_ll51u")
-
-[node name="FallingLeaves12" type="GPUParticles2D" parent="." unique_id=32699787]
-position = Vector2(883, -40)
-amount = 3
-texture = ExtResource("4_ll51u")
-lifetime = 4.0
-randomness = 1.0
-process_material = SubResource("ParticleProcessMaterial_ll51u")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1319870683]
 position = Vector2(116, 557)
