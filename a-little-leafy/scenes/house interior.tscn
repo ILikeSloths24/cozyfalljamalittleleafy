@@ -44,7 +44,7 @@ size = Vector2(20, 12.822372)
 size = Vector2(44.150665, 32.578964)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ussa"]
-size = Vector2(28.909874, 36.953667)
+size = Vector2(28.909874, 39.50349)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tm25k"]
 size = Vector2(44.009556, 39.352646)
@@ -116,6 +116,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qabks"]
+size = Vector2(23.699982, 23.017563)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb73p"]
 size = Vector2(10.923965, 2.0094986)
@@ -303,9 +306,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qabks"]
-size = Vector2(23.699982, 23.017563)
-
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 script = ExtResource("1_tm25k")
 
@@ -358,7 +358,7 @@ position = Vector2(-36.408573, -24.977964)
 shape = SubResource("RectangleShape2D_arbq3")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1986680999]
-position = Vector2(0.56447756, -32.88061)
+position = Vector2(0.564476, -31.605698)
 shape = SubResource("RectangleShape2D_3ussa")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1656209485]
@@ -366,6 +366,7 @@ position = Vector2(37.53752, -26.106909)
 shape = SubResource("RectangleShape2D_tm25k")
 
 [node name="ExitPrompt" type="Label" parent="." unique_id=33846365]
+visible = false
 offset_left = -852.0
 offset_top = 1532.0
 offset_right = -744.0
@@ -425,24 +426,6 @@ sprite_frames = SubResource("SpriteFrames_qabks")
 autoplay = "default"
 frame_progress = 0.5502807
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=616034328]
-position = Vector2(115, 187)
-scale = Vector2(5.1568627, 5.1568627)
-script = ExtResource("2_f8r2r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=234469849]
-position = Vector2(-178.24907, 212.95532)
-shape = SubResource("RectangleShape2D_nb73p")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1280324713]
-position = Vector2(-177.04562, 203.2243)
-scale = Vector2(0.8860701, 0.9027882)
-sprite_frames = SubResource("SpriteFrames_v3o3h")
-animation = &"move_up"
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
-position = Vector2(-178, 205)
-
 [node name="SIGN1" type="Sprite2D" parent="." unique_id=975958069]
 position = Vector2(-911, 1140)
 scale = Vector2(1.8764684, 1.8764684)
@@ -466,6 +449,24 @@ texture = ExtResource("12_qabks")
 position = Vector2(-0.43652344, 0.56140137)
 scale = Vector2(2.0693045, 2.0728233)
 shape = SubResource("RectangleShape2D_qabks")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=616034328]
+position = Vector2(114.99994, 187)
+scale = Vector2(5.1568623, 5.1568623)
+script = ExtResource("2_f8r2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=234469849]
+position = Vector2(-178.24907, 212.95532)
+shape = SubResource("RectangleShape2D_nb73p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1280324713]
+position = Vector2(-177.04562, 203.2243)
+scale = Vector2(0.8860701, 0.9027882)
+sprite_frames = SubResource("SpriteFrames_v3o3h")
+animation = &"move_up"
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
+position = Vector2(-178, 205)
 
 [connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
 [connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]

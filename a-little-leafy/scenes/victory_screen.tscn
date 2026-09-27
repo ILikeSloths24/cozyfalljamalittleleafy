@@ -100,8 +100,26 @@ rotation = 0.4573914
 scale = Vector2(2.4567337, 1.8964258)
 texture = ExtResource("4_ll51u")
 
+[node name="Sprite2D25" type="Sprite2D" parent="." unique_id=2059403673]
+position = Vector2(271.13495, 93.18891)
+rotation = 0.4573914
+scale = Vector2(2.3086972, 1.782152)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D24" type="Sprite2D" parent="." unique_id=515670115]
+position = Vector2(248, 319)
+rotation = 0.4573914
+scale = Vector2(1.5872413, 1.2252388)
+texture = ExtResource("4_ll51u")
+
 [node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1815510181]
 position = Vector2(294.89185, 417.7095)
+rotation = 0.4573914
+scale = Vector2(1.6813592, 1.2978913)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D26" type="Sprite2D" parent="." unique_id=1324731796]
+position = Vector2(1015, 569)
 rotation = 0.4573914
 scale = Vector2(1.6813592, 1.2978913)
 texture = ExtResource("4_ll51u")
@@ -119,7 +137,7 @@ scale = Vector2(3.0234375, 2.3338814)
 texture = ExtResource("4_ll51u")
 
 [node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1857949170]
-position = Vector2(867.57965, 324.678)
+position = Vector2(887.99994, 370.99997)
 rotation = -0.205879
 scale = Vector2(3.7211263, 2.872448)
 texture = ExtResource("4_ll51u")
@@ -131,7 +149,7 @@ scale = Vector2(3.8395097, 2.9638317)
 texture = ExtResource("4_ll51u")
 
 [node name="Sprite2D23" type="Sprite2D" parent="." unique_id=1643053797]
-position = Vector2(1031, 122.00007)
+position = Vector2(1053, 111.00002)
 rotation = -2.2356625
 scale = Vector2(3.8395097, 2.9638317)
 texture = ExtResource("4_ll51u")
@@ -156,6 +174,12 @@ texture = ExtResource("4_ll51u")
 
 [node name="Sprite2D17" type="Sprite2D" parent="." unique_id=1390350401]
 position = Vector2(752, 54)
+rotation = -0.5944922
+scale = Vector2(1.4613217, 1.1280377)
+texture = ExtResource("4_ll51u")
+
+[node name="Sprite2D27" type="Sprite2D" parent="." unique_id=397545198]
+position = Vector2(869.00006, 56.999977)
 rotation = -0.5944922
 scale = Vector2(1.4613217, 1.1280377)
 texture = ExtResource("4_ll51u")
@@ -185,7 +209,7 @@ scale = Vector2(1.4613217, 1.1280377)
 texture = ExtResource("4_ll51u")
 
 [node name="Sprite2D22" type="Sprite2D" parent="." unique_id=521314548]
-position = Vector2(692.0001, 601)
+position = Vector2(804.0001, 593)
 rotation = 0.4573914
 scale = Vector2(1.4613217, 1.1280377)
 texture = ExtResource("4_ll51u")
@@ -209,10 +233,10 @@ offset_bottom = 23.0
 
 [node name="TimeLabel" type="Label" parent="." unique_id=578300170]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 216.0
-offset_right = 776.0
-offset_bottom = 371.0
+offset_left = 440.0
+offset_top = 204.0
+offset_right = 798.0
+offset_bottom = 359.0
 theme_override_fonts/font = ExtResource("4_rixwf")
 theme_override_font_sizes/font_size = 100
 

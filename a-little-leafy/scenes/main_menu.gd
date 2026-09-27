@@ -13,3 +13,6 @@ func _on_help_button_pressed():
 
 func _on_back_button_pressed():
 	$HelpScreen.visible = false
+
+func _on_music_button_pressed():
+	$LobbyMusic.stream_paused = !$LobbyMusic.stream_paused
