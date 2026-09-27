@@ -8,3 +8,9 @@ func _process(_delta):
 	var seconds = total_seconds % 60
 
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
+
+func _ready():
+	if not GameData.timer_started:
+		GameData.game_time = 0.0
+		GameData.timer_running = true
+		GameData.timer_started = true

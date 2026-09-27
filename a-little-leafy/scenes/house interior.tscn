@@ -367,10 +367,10 @@ shape = SubResource("RectangleShape2D_tm25k")
 
 [node name="ExitPrompt" type="Label" parent="." unique_id=33846365]
 visible = false
-offset_left = -852.0
-offset_top = 1532.0
-offset_right = -744.0
-offset_bottom = 1555.0
+offset_left = -859.0
+offset_top = 1533.0
+offset_right = -742.0
+offset_bottom = 1556.0
 theme_override_fonts/font = ExtResource("3_arbq3")
 text = "Press E to Exit"
 
@@ -392,10 +392,10 @@ texture = ExtResource("5_3ussa")
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer/TextureRect" unique_id=551602167]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 21.0
-offset_right = 155.95653
-offset_bottom = 94.0
+offset_left = 33.0
+offset_top = 29.0
+offset_right = 159.95653
+offset_bottom = 102.0
 theme_override_fonts/font = ExtResource("3_arbq3")
 theme_override_font_sizes/font_size = 43
 text = "e"
@@ -428,7 +428,7 @@ frame_progress = 0.5502807
 
 [node name="SIGN1" type="Sprite2D" parent="." unique_id=975958069]
 position = Vector2(-911, 1140)
-scale = Vector2(1.8764684, 1.8764684)
+scale = Vector2(2.3164732, 2.3164732)
 texture = ExtResource("11_70dkw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SIGN1" unique_id=1192197695]

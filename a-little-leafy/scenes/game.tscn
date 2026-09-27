@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://cdkl6eorx12bc" path="res://scenes/game_data.gd.gd" id="11_kvpfn"]
 [ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="11_kvuet"]
 [ext_resource type="Script" uid="uid://dfqj6bwk0mkwg" path="res://scenes/testleaf.gd" id="12_dinhu"]
+[ext_resource type="AudioStream" uid="uid://re43utyffexk" path="res://assests/Sound/Untitled-[AudioTrimmer.com].mp3" id="14_trtic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
 
@@ -1275,6 +1276,19 @@ texture = ExtResource("4_iywne")
 position = Vector2(-81, 10)
 shape = SubResource("CircleShape2D_p57ef")
 
+[node name="Leaf6" type="Area2D" parent="." unique_id=1225816833 groups=["leaf"]]
+position = Vector2(-550, 333)
+scale = Vector2(1.5, 1.4173298)
+script = ExtResource("3_lbhrr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Leaf6" unique_id=1259563230]
+position = Vector2(-79, 8)
+texture = ExtResource("4_iywne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaf6" unique_id=21267666]
+position = Vector2(-81, 10)
+shape = SubResource("CircleShape2D_p57ef")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=535366663]
 stream = SubResource("AudioStreamMP3_vtaks")
 volume_db = -22.12
@@ -1282,9 +1296,13 @@ autoplay = true
 playback_type = 1
 script = ExtResource("11_kvpfn")
 
+[node name="MilestoneSound" type="AudioStreamPlayer" parent="." unique_id=409657030]
+stream = ExtResource("14_trtic")
+
 [connection signal="area_entered" from="Player/LeafPickupRadius" to="Player/LeafPickupRadius" method="_on_area_entered"]
 [connection signal="body_entered" from="Leaf" to="Leaf" method="_on_body_entered"]
 [connection signal="body_entered" from="Leaf2" to="Leaf2" method="_on_body_entered"]
 [connection signal="body_entered" from="Leaf3" to="Leaf3" method="_on_body_entered"]
 [connection signal="body_entered" from="Leaf4" to="Leaf4" method="_on_body_entered"]
 [connection signal="body_entered" from="Leaf5" to="Leaf5" method="_on_body_entered"]
+[connection signal="body_entered" from="Leaf6" to="Leaf6" method="_on_body_entered"]

@@ -20,7 +20,7 @@ func update_upgrades():
 	if has_node("LeafPickupRadius/CollisionShape2D"):
 		var pickup_shape = $LeafPickupRadius/CollisionShape2D.shape
 
-		if GameData.leaves_collected >= 5:
+		if GameData.leaves_collected >= 6:
 			pickup_shape.radius = 85.0
 		elif GameData.leaves_collected >= 2:
 			pickup_shape.radius = 60.0

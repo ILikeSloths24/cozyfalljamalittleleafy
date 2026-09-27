@@ -1,6 +1,6 @@
 extends Node2D
 
-var total_leaves: int = 5
+var total_leaves: int = 6
 
 @onready var leaf_counter = $CanvasLayer/CounterBox/LeafCounter
 @onready var timer_label = $CanvasLayer/TextureRect/TimerLabel
@@ -38,9 +38,9 @@ func collect_leaf():
 			"MILESTONE REACHED!\n3 LEAVES\nMovement Speed Increased!"
 		)
 
-	elif GameData.leaves_collected == 5:
+	elif GameData.leaves_collected == 6:
 		show_milestone(
-			"MILESTONE REACHED!\n5 LEAVES\nLeaf Pickup Radius Increased!"
+			"MILESTONE REACHED!\n6 LEAVES\nLeaf Pickup Radius Increased!"
 		)
 
 	if GameData.leaves_collected >= total_leaves:
@@ -59,8 +59,9 @@ func show_milestone(message: String):
 
 	label.text = message
 	box.visible = true
+	$MilestoneSound.play()
 
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(7.0).timeout
 
 	box.visible = false
 
