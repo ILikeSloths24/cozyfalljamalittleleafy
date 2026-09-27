@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cqus1puiyyjok" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
 [ext_resource type="Texture2D" uid="uid://dw01jo82oea17" path="res://assests/Art/Player.png" id="6_ienn0"]
 [ext_resource type="Texture2D" uid="uid://byg43f2f3w7d8" path="res://assests/Art/Fire.png" id="7_ienn0"]
+[ext_resource type="Texture2D" uid="uid://dh7wk3qui72wq" path="res://assests/Art/sign.png" id="11_70dkw"]
+[ext_resource type="Texture2D" uid="uid://fivf1otvlg6x" path="res://assests/Art/sign 2.png" id="12_qabks"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ienn0"]
 diffuse_texture = ExtResource("1_edutt")
@@ -301,6 +303,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qabks"]
+size = Vector2(23.699982, 23.017563)
+
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
 script = ExtResource("1_tm25k")
 
@@ -437,6 +442,30 @@ animation = &"move_up"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
 position = Vector2(-178, 205)
+
+[node name="SIGN1" type="Sprite2D" parent="." unique_id=975958069]
+position = Vector2(-911, 1140)
+scale = Vector2(1.8764684, 1.8764684)
+texture = ExtResource("11_70dkw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SIGN1" unique_id=1192197695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SIGN1/StaticBody2D" unique_id=1733865495]
+position = Vector2(-5.662441e-07, 0.5614025)
+scale = Vector2(2.0610957, 2.0610957)
+shape = SubResource("RectangleShape2D_qabks")
+
+[node name="SIGN2" type="Sprite2D" parent="SIGN1" unique_id=567373824]
+position = Vector2(101.25404, -3.1974926)
+scale = Vector2(0.83252794, 0.83252794)
+texture = ExtResource("12_qabks")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SIGN1/SIGN2" unique_id=379020092]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SIGN1/SIGN2/StaticBody2D" unique_id=2098022226]
+position = Vector2(-0.43652344, 0.56140137)
+scale = Vector2(2.0693045, 2.0728233)
+shape = SubResource("RectangleShape2D_qabks")
 
 [connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
 [connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]
