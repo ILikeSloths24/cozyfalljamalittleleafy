@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dw01jo82oea17" path="res://assests/Art/Player.png" id="8_dinhu"]
 [ext_resource type="Script" uid="uid://2x36atdajha6" path="res://scenes/leaf_pickup_radius.gd" id="9_trtic"]
 [ext_resource type="Script" uid="uid://cdkl6eorx12bc" path="res://scenes/game_data.gd.gd" id="11_kvpfn"]
+[ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="11_kvuet"]
 [ext_resource type="Script" uid="uid://dfqj6bwk0mkwg" path="res://scenes/testleaf.gd" id="12_dinhu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
@@ -1072,89 +1073,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ir15t"]
 radius = 197.0406
 
-[sub_resource type="FontFile" id="FontFile_lbhrr"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
-
-[sub_resource type="FontFile" id="FontFile_dinhu"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/17/0/ascent = 0.0
-cache/0/17/0/descent = 0.0
-cache/0/17/0/underline_position = 0.0
-cache/0/17/0/underline_thickness = 0.0
-cache/0/17/0/scale = 1.0
-cache/0/18/0/ascent = 0.0
-cache/0/18/0/descent = 0.0
-cache/0/18/0/underline_position = 0.0
-cache/0/18/0/underline_thickness = 0.0
-cache/0/18/0/scale = 1.0
-cache/0/19/0/ascent = 0.0
-cache/0/19/0/descent = 0.0
-cache/0/19/0/underline_position = 0.0
-cache/0/19/0/underline_thickness = 0.0
-cache/0/19/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/21/0/ascent = 0.0
-cache/0/21/0/descent = 0.0
-cache/0/21/0/underline_position = 0.0
-cache/0/21/0/underline_thickness = 0.0
-cache/0/21/0/scale = 1.0
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/23/0/ascent = 0.0
-cache/0/23/0/descent = 0.0
-cache/0/23/0/underline_position = 0.0
-cache/0/23/0/underline_thickness = 0.0
-cache/0/23/0/scale = 1.0
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
-cache/0/25/0/ascent = 0.0
-cache/0/25/0/descent = 0.0
-cache/0/25/0/underline_position = 0.0
-cache/0/25/0/underline_thickness = 0.0
-cache/0/25/0/scale = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p57ef"]
 radius = 13.152946
@@ -1215,6 +1134,8 @@ script = ExtResource("9_trtic")
 position = Vector2(-178, 201)
 shape = SubResource("CircleShape2D_ir15t")
 
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1255796760]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1868535772]
 
 [node name="CounterBox" type="TextureRect" parent="CanvasLayer" unique_id=1874377406]
@@ -1232,7 +1153,7 @@ offset_right = 215.0
 offset_bottom = 63.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.8057534, 0.6938471, 0.5707684, 0)
-theme_override_fonts/font = SubResource("FontFile_lbhrr")
+theme_override_fonts/font = ExtResource("11_kvuet")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_p57ef")
 text = "  Leaves: 0 / 0"
@@ -1268,9 +1189,26 @@ offset_left = 16.0
 offset_top = 30.0
 offset_right = 164.6521
 offset_bottom = 64.0
-theme_override_fonts/font = SubResource("FontFile_dinhu")
+theme_override_fonts/font = ExtResource("11_kvuet")
 theme_override_font_sizes/font_size = 25
-text = "test"
+text = "leave this text alone"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=284005126]
+offset_left = 949.0
+offset_top = 520.0
+offset_right = 1133.0
+offset_bottom = 635.0
+texture = ExtResource("5_iywne")
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/TextureRect" unique_id=1842968002]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 21.0
+offset_right = 155.95653
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("11_kvuet")
+theme_override_font_sizes/font_size = 43
+text = "e"
 
 [node name="Leaf" type="Area2D" parent="." unique_id=1136360925 groups=["leaf"]]
 position = Vector2(84, 338)

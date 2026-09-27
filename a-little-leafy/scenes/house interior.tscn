@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://d4drlwe4arnoq" path="res://assests/Art/Inside Of Room.png" id="1_37xdy"]
 [ext_resource type="Texture2D" uid="uid://cydnlv0401skk" path="res://assests/Art/Screenshot 2026-09-26 161706.png" id="1_edutt"]
+[ext_resource type="Script" uid="uid://dehy0x2ixx258" path="res://scenes/house_interior.gd" id="1_tm25k"]
 [ext_resource type="Script" uid="uid://dx6laraswu5mu" path="res://character_body_2d.gd" id="2_f8r2r"]
+[ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="3_arbq3"]
 [ext_resource type="Script" uid="uid://d1pegx2wd4fvf" path="res://scenes/exit.gd" id="4_f8r2r"]
-[ext_resource type="Texture2D" uid="uid://bqobvl4fidc6o" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
+[ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="5_3ussa"]
+[ext_resource type="Texture2D" uid="uid://cqus1puiyyjok" path="res://assests/Art/radio___pixelart_by_coffeejoeboy_dfqqbq7-pre.png" id="5_b7man"]
 [ext_resource type="Texture2D" uid="uid://dw01jo82oea17" path="res://assests/Art/Player.png" id="6_ienn0"]
 [ext_resource type="Texture2D" uid="uid://byg43f2f3w7d8" path="res://assests/Art/Fire.png" id="7_ienn0"]
 
@@ -89,6 +92,28 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7man"]
 size = Vector2(25.358475, 16.90564)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm25k"]
+atlas = ExtResource("7_ienn0")
+region = Rect2(0, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70dkw"]
+atlas = ExtResource("7_ienn0")
+region = Rect2(0, 33, 32, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qabks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm25k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70dkw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nb73p"]
 size = Vector2(10.923965, 2.0094986)
@@ -276,29 +301,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tm25k"]
-atlas = ExtResource("7_ienn0")
-region = Rect2(0, 0, 32, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_70dkw"]
-atlas = ExtResource("7_ienn0")
-region = Rect2(0, 33, 32, 33)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qabks"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tm25k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_70dkw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="HouseInterior" type="Node2D" unique_id=200704792]
+script = ExtResource("1_tm25k")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=936323373]
 position = Vector2(-1289, 985)
@@ -361,6 +365,7 @@ offset_left = -852.0
 offset_top = 1532.0
 offset_right = -744.0
 offset_bottom = 1555.0
+theme_override_fonts/font = ExtResource("3_arbq3")
 text = "Press E to Exit"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1090069747]
@@ -371,6 +376,23 @@ script = ExtResource("4_f8r2r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Exit" unique_id=1645528374]
 position = Vector2(-800, 1443)
 shape = SubResource("RectangleShape2D_37xdy")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1265763313]
+offset_left = 949.0
+offset_top = 520.0
+offset_right = 1133.0
+offset_bottom = 635.0
+texture = ExtResource("5_3ussa")
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/TextureRect" unique_id=551602167]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 21.0
+offset_right = 155.95653
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("3_arbq3")
+theme_override_font_sizes/font_size = 43
+text = "e"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=584599826]
 stream = SubResource("AudioStreamMP3_b7man")
@@ -391,6 +413,13 @@ position = Vector2(0.30187988, 3.9244995)
 scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_b7man")
 
+[node name="Fire" type="AnimatedSprite2D" parent="." unique_id=62521213]
+position = Vector2(-808.00006, 1075)
+scale = Vector2(2.4375, 2.4375)
+sprite_frames = SubResource("SpriteFrames_qabks")
+autoplay = "default"
+frame_progress = 0.5502807
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=616034328]
 position = Vector2(115, 187)
 scale = Vector2(5.1568627, 5.1568627)
@@ -408,13 +437,6 @@ animation = &"move_up"
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=826152975]
 position = Vector2(-178, 205)
-
-[node name="Fire" type="AnimatedSprite2D" parent="." unique_id=62521213]
-position = Vector2(-808.00006, 1075)
-scale = Vector2(2.4375, 2.4375)
-sprite_frames = SubResource("SpriteFrames_qabks")
-autoplay = "default"
-frame_progress = 0.5502807
 
 [connection signal="body_entered" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_entered"]
 [connection signal="body_exited" from="CanvasLayer/Exit" to="CanvasLayer/Exit" method="_on_body_exited"]
