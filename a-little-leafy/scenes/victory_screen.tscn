@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cl4dojj60kjjw"]
+
+[ext_resource type="Script" uid="uid://crcg2c35vomew" path="res://victory_screen.gd" id="1_wdgif"]
+[ext_resource type="Texture2D" uid="uid://doa85tnbc8tca" path="res://assests/Art/win screen.png" id="2_pfcnd"]
+[ext_resource type="Texture2D" uid="uid://lyf5yycwj5gy" path="res://assests/Art/Text background.png" id="3_pfcnd"]
+[ext_resource type="FontFile" uid="uid://dw0coac3nyn5q" path="res://assests/Art/PixelifySans-Regular.ttf" id="4_rixwf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rixwf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ll51u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1juoc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbi6c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4hde"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66hvp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2cu1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uycue"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ox400"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l423"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6xhdp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5dynx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjx08"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6idy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qlmt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i46k6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m71wc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wv4uk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1o8pm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfkx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7u0rg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k2nhu"]
+
+[node name="VictoryScreen" type="Control" unique_id=764614648]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wdgif")
+
+[node name="Background" type="TextureRect" parent="." unique_id=997445242]
+layout_mode = 0
+offset_right = 1155.5555
+offset_bottom = 650.0
+texture = ExtResource("2_pfcnd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355213378]
+position = Vector2(572.5, 281)
+scale = Vector2(6.234375, 4.8125)
+texture = ExtResource("3_pfcnd")
+
+[node name="TimeTitle" type="Label" parent="." unique_id=808753700]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TimeLabel" type="Label" parent="." unique_id=578300170]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 216.0
+offset_right = 776.0
+offset_bottom = 371.0
+theme_override_fonts/font = ExtResource("4_rixwf")
+theme_override_font_sizes/font_size = 100
+text = "e"
+
+[node name="RestartButton" type="Button" parent="." unique_id=518010464]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 374.0
+offset_right = 757.0
+offset_bottom = 448.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rixwf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ll51u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1juoc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_wbi6c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u4hde")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_66hvp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a2cu1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uycue")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ox400")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7l423")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6xhdp")
+
+[node name="QuitButton" type="Button" parent="." unique_id=116364429]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 461.0
+offset_right = 756.0
+offset_bottom = 532.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5dynx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jjx08")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_d6idy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6qlmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i46k6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_m71wc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wv4uk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1o8pm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7dfkx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7u0rg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k2nhu")
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

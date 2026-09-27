@@ -43,6 +43,10 @@ func collect_leaf():
 			"MILESTONE REACHED!\n5 LEAVES\nLeaf Pickup Radius Increased!"
 		)
 
+	if GameData.leaves_collected >= total_leaves:
+		GameData.timer_running = false
+		get_tree().change_scene_to_file("res://scenes/victory_screen.tscn")
+
 
 func update_counter():
 	leaf_counter.text = "Leaves: " + str(GameData.leaves_collected) + " / " + str(total_leaves)
